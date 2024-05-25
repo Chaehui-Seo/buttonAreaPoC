@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF92CE152BFB8FB500567027 /* buttonAreaPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buttonAreaPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF92CE152BFB8FB500567027 /* buttonAreaPoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buttonAreaPoC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF92CE182BFB8FB500567027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF92CE1A2BFB8FB500567027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF92CE1C2BFB8FB500567027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		EF92CE0C2BFB8FB500567027 = {
 			isa = PBXGroup;
 			children = (
-				EF92CE172BFB8FB500567027 /* buttonAreaPOC */,
+				EF92CE172BFB8FB500567027 /* buttonAreaPoC */,
 				EF92CE162BFB8FB500567027 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		EF92CE162BFB8FB500567027 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF92CE152BFB8FB500567027 /* buttonAreaPOC.app */,
+				EF92CE152BFB8FB500567027 /* buttonAreaPoC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EF92CE172BFB8FB500567027 /* buttonAreaPOC */ = {
+		EF92CE172BFB8FB500567027 /* buttonAreaPoC */ = {
 			isa = PBXGroup;
 			children = (
 				EF92CE182BFB8FB500567027 /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				EF92CE232BFB8FB700567027 /* LaunchScreen.storyboard */,
 				EF92CE262BFB8FB700567027 /* Info.plist */,
 			);
-			path = buttonAreaPOC;
+			path = buttonAreaPoC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EF92CE142BFB8FB500567027 /* buttonAreaPOC */ = {
+		EF92CE142BFB8FB500567027 /* buttonAreaPoC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF92CE292BFB8FB700567027 /* Build configuration list for PBXNativeTarget "buttonAreaPOC" */;
+			buildConfigurationList = EF92CE292BFB8FB700567027 /* Build configuration list for PBXNativeTarget "buttonAreaPoC" */;
 			buildPhases = (
 				EF92CE112BFB8FB500567027 /* Sources */,
 				EF92CE122BFB8FB500567027 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = buttonAreaPOC;
+			name = buttonAreaPoC;
 			productName = buttonAreaPOC;
-			productReference = EF92CE152BFB8FB500567027 /* buttonAreaPOC.app */;
+			productReference = EF92CE152BFB8FB500567027 /* buttonAreaPoC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EF92CE102BFB8FB500567027 /* Build configuration list for PBXProject "buttonAreaPOC" */;
+			buildConfigurationList = EF92CE102BFB8FB500567027 /* Build configuration list for PBXProject "buttonAreaPoC" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF92CE142BFB8FB500567027 /* buttonAreaPOC */,
+				EF92CE142BFB8FB500567027 /* buttonAreaPoC */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +294,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8U52U9S3AX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = buttonAreaPOC/Info.plist;
+				INFOPLIST_FILE = buttonAreaPoC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -305,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaehui.buttonAreaPOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaehui.buttonAreaPoC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,7 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8U52U9S3AX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = buttonAreaPOC/Info.plist;
+				INFOPLIST_FILE = buttonAreaPoC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaehui.buttonAreaPOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaehui.buttonAreaPoC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -344,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EF92CE102BFB8FB500567027 /* Build configuration list for PBXProject "buttonAreaPOC" */ = {
+		EF92CE102BFB8FB500567027 /* Build configuration list for PBXProject "buttonAreaPoC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF92CE272BFB8FB700567027 /* Debug */,
@@ -353,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF92CE292BFB8FB700567027 /* Build configuration list for PBXNativeTarget "buttonAreaPOC" */ = {
+		EF92CE292BFB8FB700567027 /* Build configuration list for PBXNativeTarget "buttonAreaPoC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF92CE2A2BFB8FB700567027 /* Debug */,
