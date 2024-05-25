@@ -8,11 +8,39 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    private lazy var eventTitleLabel = makeEventTitleLabel()
+    private lazy var eventButton = makeEventButton()
+    
+    // MARK: - VC LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupUI()
+        setupActions()
+    }
+    
+    // MARK: - Initial Setting
+    /**
+     set UI elements
+     */
+    func setupUI() {
+        makeGrid()
+        self.view.addSubview(eventButton)
+        self.view.addSubview(eventTitleLabel)
         
+        NSLayoutConstraint.activate([
+            eventButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 150),
+            eventButton.widthAnchor.constraint(equalToConstant: 100),
+            eventButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 400),
+            eventButton.heightAnchor.constraint(equalToConstant: 40),
+            eventTitleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+            eventTitleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        ])
+    }
+    
+    /**
+     Make gridlines whose spacings are 10
+     */
+    private func makeGrid() {
         var curX = 9.0
         while curX < self.view.frame.maxX {
             let view = UIView()
@@ -44,54 +72,55 @@ class ViewController: UIViewController {
             ])
             curY += 10
         }
-        
-        let button = UIButton()
-        button.backgroundColor = .tintColor
-        button.setTitleColor(.white, for: .normal)
-        button.setTitle("Button", for: .normal)
+    }
+    
+    /**
+     set actions to UI elements
+     */
+    func setupActions() {
+        eventButton.addTarget(self, action: #selector(touchDragExit), for: .touchDragExit)
+        eventButton.addTarget(self, action: #selector(touchDown), for: .touchDown)
+        eventButton.addTarget(self, action: #selector(touchDragEnter), for: .touchDragEnter)
+        eventButton.addTarget(self, action: #selector(touchUp), for: .touchUpInside)
+        eventButton.addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
+    }
+}
+
+
+// MARK: - Making UI element
+extension ViewController {
+    func makeEventButton() -> UIButton {
+        let button = UIButton(configuration: .filled())
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(touchDragExit), for: .touchDragExit)
-        button.addTarget(self, action: #selector(touchDown), for: .touchDown)
-        button.addTarget(self, action: #selector(touchDragEnter), for: .touchDragEnter)
-        button.addTarget(self, action: #selector(touchUp), for: .touchUpInside)
-        button.addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
-        self.view.addSubview(button)
-        
-        NSLayoutConstraint.activate([
-            button.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 150),
-            button.widthAnchor.constraint(equalToConstant: 100),
-            button.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 400),
-            button.heightAnchor.constraint(equalToConstant: 40)
-        ])
-        
+        button.setTitle("Button", for: .normal)
+        return button
+    }
+    
+    func makeEventTitleLabel() -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .white
         label.font = .systemFont(ofSize: 20, weight: .heavy)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(label)
-        NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
-            label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        ])
+        return label
     }
-    let label = UILabel()
+}
 
-
+// MARK: - Button actions
+extension ViewController {
     @objc func touchDragExit() {
-        label.text = "🏃‍♀️Exit"
-        print("🏃‍♀️Exit")
+        eventTitleLabel.text = "🏃‍♀️Exit"
     }
     
     @objc func touchDragEnter() {
-        label.text = "🏠Enter"
-        print("🏠Enter")
+        eventTitleLabel.text = "🏠Enter"
     }
     
     @objc func touchUp() {
-        label.text = ""
+        eventTitleLabel.text = ""
     }
     
     @objc func touchDown() {
-        print("down down down down")
+        eventTitleLabel.text = "👇Touch Down"
     }
 }
 
