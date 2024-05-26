@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         makeGrid()
         self.view.addSubview(eventButton)
         self.view.addSubview(eventTitleLabel)
+        makeDragTriggerBorder()
         
         NSLayoutConstraint.activate([
             eventButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 150),
@@ -72,6 +73,24 @@ class ViewController: UIViewController {
             ])
             curY += 10
         }
+    }
+    
+    /**
+     make drag method trigger border
+     */
+    func makeDragTriggerBorder() {
+        let borderView = UIView()
+        borderView.translatesAutoresizingMaskIntoConstraints = false
+        borderView.layer.borderWidth = 2
+        borderView.layer.borderColor = UIColor.systemRed.cgColor
+        borderView.isUserInteractionEnabled = false
+        self.view.addSubview(borderView)
+        NSLayoutConstraint.activate([
+            borderView.leadingAnchor.constraint(equalTo: eventButton.leadingAnchor, constant: -72),
+            borderView.trailingAnchor.constraint(equalTo: eventButton.trailingAnchor, constant: 72),
+            borderView.topAnchor.constraint(equalTo: eventButton.topAnchor, constant: -72),
+            borderView.bottomAnchor.constraint(equalTo: eventButton.bottomAnchor, constant: 72)
+        ])
     }
     
     /**
